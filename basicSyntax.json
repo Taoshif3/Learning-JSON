@@ -1,0 +1,94 @@
+{
+  "students":         
+  [
+    {
+    "name": "Gazi Taoshif",  
+    "middleName": "null",
+    "age": 20,
+    "cgpa": 3.24,
+    "isRegistered": true,
+    "languages": ["Bangla","English"],
+    "firends": [
+      {
+        "name": "Rakib",
+        "age": 25    
+      },
+      {
+        "name": "Ruhul",
+        "age": 22
+      }
+    ]
+    },
+    {
+    "name": "Anisl Islam",
+    "middleName": "null",
+    "age": 30,
+    "cgpa": 3.44,
+    "isRegistered": false,
+    "languages": ["Bangla","English","finnish"],
+    "firends": [
+      {
+        "name": "Akib",
+        "age": 25    
+      },
+      {
+        "name": "jumur",
+        "age": 29
+      }
+    ]
+    }
+  ]
+}
+
+
+------------
+// Sample JSON data as a JavaScript object
+let data = {
+  "friends": [
+    {
+      "name": "Bijoy",
+      "age": 25,
+      "languages": ["Bangla", "English"]
+    },
+    {
+      "name": "Ruhul",
+      "age": 31
+    }
+  ]
+};
+
+// Accessing nested values:
+console.log(data.friends[0].name); // Output: Bijoy
+console.log(data.friends[1].age);  // Output: 31
+
+// Modifying nested values:
+data.friends[0].name = "Joy";
+data.friends[0].languages[0] = "Arabic"; // Replacing the first language
+data.friends[1].age = 32;
+
+// Deleting
+delete data.friends[0].name;
+// Verifying the changes:
+console.log(data.friends[0].name); // Output: Joy
+console.log(data.friends[1].age);  // Output: 32
+
+// Adding a new friend:
+data.friends.push({
+  "name": "Amir",
+  "age": 28
+});
+
+console.log(data.friends); // Output: The updated array with the new friend
+
+// Modifying nested values using variables:
+let friendIndex = 0;
+let newName = "Gazi";
+data.friends[friendIndex].name = newName;
+
+console.log(data.friends[0].name); // Output: Gazi
+
+// Printing value using for-in loop
+for (x in data) {
+  console.log(x);         // Output: friends
+  conosle.log(data[x]);  // Output: The array of friends
+}
